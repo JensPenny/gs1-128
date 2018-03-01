@@ -5,12 +5,12 @@ package br.com.devsource.gs1;
  */
 public enum AIs implements AI {
 
-  /** Código de Série de Unidade Logística */
-  SSCC("00", "SSCC", "Código de Série de Unidade Logística", "n2+n18"),
-  /** Número Global de Item Comercial */
-  GTIN("01", "GTIN", "Número Global de Item Comercial", "n2+n14"),
-  /** GTIN de itens comerciais contidos em uma unidade logística */
-  CONTENT("02", "CONTENT", "GTIN de itens comerciais contidos em uma unidade logística", "n2+n14"),
+  /** Serial Shipping Container code */
+  SSCC("00", "SSCC", "Serial Shipping Container Code", "n2+n18"),
+  /** Global Trade Item Nr */
+  GTIN("01", "GTIN", "Global Trade Item Nr", "n2+n14"),
+  /** Identification of trade items contained in a logistic unit */
+  CONTENT("02", "CONTENT", "Identification of trade items contained in a logistic unit", "n2+n14"),
   /** Número de Batch ou Lote */
   BATCH_LOT("10", "BATCH/LOT", "Número de Batch ou Lote", "n2+an..20"),
   /** Data de produção */
