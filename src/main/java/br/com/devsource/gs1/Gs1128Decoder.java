@@ -56,9 +56,9 @@ public final class Gs1128Decoder {
   }
 
   private void validateBarcode(String codigo) {
-    Validate.notBlank(codigo, "Código de barra é inválido");
+    Validate.notBlank(codigo, "Invalid barcode");
     Validate.isTrue(StringUtils.startsWithIgnoreCase(codigo, Gs1128Utils.PREFIX),
-      "Código de barra inválido");
+      "Invalid barcode");
   }
 
 }

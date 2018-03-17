@@ -13,9 +13,9 @@ import org.apache.commons.lang3.Validate;
  */
 enum SessionType {
 
-  AN("Alfanumérico", v -> Character.isAlphabetic(v) || Character.isDigit(v)),
-  A("Alfabético", v -> Character.isAlphabetic(v)),
-  N("Numérico", v -> Character.isDigit(v));
+  AN("Alphanumerical", v -> Character.isAlphabetic(v) || Character.isDigit(v)),
+  A("Alphabetical", v -> Character.isAlphabetic(v)),
+  N("Numerical", v -> Character.isDigit(v));
 
   private String description;
   private Predicate<Character> validateCharset;
