@@ -3,32 +3,24 @@ package br.com.devsource.gs1;
 /**
  * @author guilherme.pacheco
  */
+
+ //A list of possible AI Definitions defined in the spec is available on
+ //https://www.gs1.org/sites/default/files/docs/barcodes/GS1_General_Specifications.pdf p133
+ //The code is based on https://www.databar-barcode.info/application-identifiers/ 
 public enum AIs implements AI {
 
-  /** Serial Shipping Container code */
   SSCC("00", "SSCC", "Serial Shipping Container Code", "n2+n18"),
-  /** Global Trade Item Nr */
   GTIN("01", "GTIN", "Global Trade Item Nr", "n2+n14"),
-  /** Identification of trade items contained in a logistic unit */
   CONTENT("02", "CONTENT", "Identification of trade items contained in a logistic unit", "n2+n14"),
-  /** Número de Batch ou Lote */
-  BATCH_LOT("10", "BATCH/LOT", "Número de Batch ou Lote", "n2+an..20"),
-  /** Data de produção */
-  PROD_DATE("11", "PROD DATE", "Data de produção", "n2+n6"),
-  /** Data de vencimento */
-  DUE_DATE("12", "DUE DATE", "Data de vencimento", "n2+n6"),
-  /** Data de embalagem */
-  PACK_DATE("13", "PACK DATE", "Data de embalagem", "n2+n6"),
-  /** Data de durabilidade mínima */
-  BEST_BEFORE("15", "BEST BEFORE or SELL BY", "Data de durabilidade mínima", "n2+n6"),
-  /** Data de durabilidade máxima */
-  EXPIRY("17", "USE BY or EXPIRY", "Data de durabilidade máxima", "n2+n6"),
-  /** Variante do produto */
-  VARIANT("20", "VARIANT", "Variante do produto", "n2+n2"),
-  /** Número de série */
-  SERIAL("21", "SERIAL", "Número de série", "n2+an..20"),
-  QTY_DATE_BATCH("22", "QTY / DATE / BATCH", "Dados secundários para produtos específicos "
-      + "do setor de saúde (HIBCC)", "n2+an..29");
+  BATCH_LOT("10", "BATCH/LOT", "Batch number", "n2+an..20"),
+  PROD_DATE("11", "PROD DATE", "Production date", "n2+n6"),
+  DUE_DATE("12", "DUE DATE", "Due date", "n2+n6"),
+  PACK_DATE("13", "PACK DATE", "Packaging date", "n2+n6"),
+  BEST_BEFORE("15", "BEST BEFORE or SELL BY", "Best before date", "n2+n6"),
+  EXPIRY("17", "USE BY or EXPIRY", "Expiration date", "n2+n6"),
+  VARIANT("20", "VARIANT", "Product variation", "n2+n2"),
+  SERIAL("21", "SERIAL", "Serial Number", "n2+an..20"),
+  QTY_DATE_BATCH("22", "QTY / DATE / BATCH", "Consumer product variation - healthcare specific", "n2+an..29");
 
   private String code;
   private String title;
